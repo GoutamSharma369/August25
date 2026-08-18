@@ -1,0 +1,102 @@
+/* write a java program that calc. avg marks of Student and determine the grades and
+following criteria.
+*/
+import java.util.Scanner;
+
+public class Logic_Building {
+    static byte a;
+    static short b;
+    static int c;
+    static long d;
+    static float e;
+    static double f;
+    static char g;
+    static boolean h;
+    public static void main(String args[]){
+
+
+        int total=100;
+        Scanner sc=new Scanner(System.in);
+
+        System.out.println("Enter the subject name : ");
+        String subject1= sc.next();
+        System.out.println("Enter Your Marks : ");
+        int m1 = sc.nextInt();
+        System.out.println("Enter the subject name : ");
+        String subject2= sc.next();
+        System.out.println("Enter Your Marks : ");
+        int m2 = sc.nextInt();
+        System.out.println("Enter the subject name : ");
+        String subject3= sc.next();
+        System.out.println("Enter Your Marks : ");
+        int m3 = sc.nextInt();
+
+        int Avg = (m1 +m2+m3)/3;
+
+        if(Avg <total && Avg >=90){
+            System.out.println("Grade A");
+        } else if (Avg <=89 && Avg >=70) {
+            System.out.println("Grade B");
+        }else if(Avg <=69 && Avg >=50){
+            System.out.println("Grade C");
+        }else if(Avg <=30 && Avg >=49) {
+            System.out.println("Grade D");
+        }else{
+            System.out.println("Fail");
+        }
+/*
+        write a java p whether the year is leap year or not
+*/
+        System.out.println("Q2");
+
+        int year=sc.nextInt();
+        if(year%400==0 || (year%4==0 && year%100 !=0 ) ){
+            System.out.println("Leap Year");
+        }else{
+            System.out.println("normal year");
+        }
+
+/*
+        Indentify the value of uninitialized variable
+*/
+        System.out.println("Q4");
+            System.out.println("byte: "+ a);
+            System.out.println("short: " + b);
+            System.out.println("int: " + c);
+            System.out.println("long: "+ d);
+            System.out.println("float: "+ e);
+            System.out.println("double: " + f);
+            System.out.println("char: " + g);
+            System.out.println("boolean: " + h);
+
+// Q3 Day of the week
+        System.out.println("Day Number : ");
+        int daynumber = sc.nextInt();
+        if(daynumber>=1 && daynumber<=7){
+        switch(daynumber) {
+            case 1:
+                System.out.println("The Day is Monday");
+                break;
+            case 2:
+                System.out.println("The Day is Tuesday");
+                break;
+            case 3:
+                System.out.println("The Day is Wednesday");
+                break;
+            case 4:
+                System.out.println("The Day is Thursday");
+                break;
+            case 5:
+                System.out.println("The Day is Friday");
+                break;
+            case 6:
+                System.out.println("The Day is Saturday");
+                break;
+            case 7:
+                System.out.println("The Day is Sunday");
+                break;
+        }
+        }
+
+    }
+}
